@@ -1,0 +1,49 @@
+body {
+  font-family: sans-serif;
+}
+#controls {
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+}
+button {
+  padding: 8px 12px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+#editor {
+  width: 42cm; /* 2* A4 paper width */
+  height: 59.4cm; /* 2* A4 paper height */
+  border: 1px solid black;
+  position: relative;
+  margin: 20px auto;
+  overflow: hidden;
+}
+.text-block {
+  position: absolute;
+  border: 1px dashed #ccc;
+  cursor: move;
+  /* Contain the image without overflow */
+  display: flex;
+  justify-content: center;
+  /*align-items: center;*/
+}
+.text-block:focus, .text-block.active {
+  border: 1px solid #007bff;
+  outline: none;
+}
+.text-block img {
+  /*max-width: 100%;
+  max-height: 100%;*/
+  object-fit: none;
+  position: absolute;
+  left: 0px;
+  margin:0;
+  padding:0;
+  pointer-events: none; /* Let clicks pass through to the div */
+}
+.image-block img {
+  width: 100%;
+  height: auto;
+  /*object-fit: none;*/
+  /*pointer-events: none; Let clicks pass through to the div */
+}
